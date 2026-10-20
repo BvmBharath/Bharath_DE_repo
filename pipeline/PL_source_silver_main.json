@@ -79,6 +79,9 @@
 			"test": {
 				"type": "String",
 				"defaultValue": "neon_postgres"
+			},
+			"start_time": {
+				"type": "String"
 			}
 		},
 		"annotations": []
