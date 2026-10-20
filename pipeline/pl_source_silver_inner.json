@@ -113,7 +113,7 @@
 						"parameters": {
 							"container": "landing",
 							"folder": {
-								"value": "@concat(\n    activity('read table for each').output.firstRow.source_table_name,\n    '/',activity('read table for each').output.firstRow.source_table_name,\n    '/',variables('starttime')\n)",
+								"value": "@concat(\n    activity('read table for each').output.firstRow.source_system,\n    '/',activity('read table for each').output.firstRow.source_table_name,\n    '/',variables('starttime')\n)",
 								"type": "Expression"
 							}
 						}
