@@ -77,7 +77,8 @@
 		},
 		"variables": {
 			"test": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "neon_postgres"
 			}
 		},
 		"annotations": []
