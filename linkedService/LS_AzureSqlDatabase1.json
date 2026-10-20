@@ -1,0 +1,23 @@
+{
+	"name": "LS_AzureSqlDatabase1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "bharathdevserverp1.database.windows.net",
+			"database": "free-sql-db-5038293",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "bharath_admin",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "akv_AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "azuresql-password"
+			}
+		}
+	}
+}
