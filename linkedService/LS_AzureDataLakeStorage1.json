@@ -1,0 +1,10 @@
+{
+	"name": "LS_AzureDataLakeStorage1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://bharathdevdatalakep1.dfs.core.windows.net/"
+		}
+	}
+}
