@@ -431,7 +431,7 @@
 											"parameters": {
 												"container": "source",
 												"folder": {
-													"value": "@activity('read table for each').output.firstRow.insurance_providers ",
+													"value": "@activity('read table for each').output.firstRow.source_path ",
 													"type": "Expression"
 												}
 											}
