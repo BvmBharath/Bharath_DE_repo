@@ -405,7 +405,7 @@
 											"type": "BinarySource",
 											"storeSettings": {
 												"type": "AzureBlobFSReadSettings",
-												"recursive": false,
+												"recursive": true,
 												"modifiedDatetimeStart": {
 													"value": "@variables('watermark_value')",
 													"type": "Expression"
@@ -429,11 +429,11 @@
 											"referenceName": "DS_csv_Binary1",
 											"type": "DatasetReference",
 											"parameters": {
+												"container": "source",
 												"folder": {
-													"value": "@activity('read table for each').output.firstRow.source_path",
+													"value": "@activity('read table for each').output.firstRow.insurance_providers ",
 													"type": "Expression"
-												},
-												"container": "source"
+												}
 											}
 										}
 									],
@@ -442,11 +442,11 @@
 											"referenceName": "DS_csv_Binary1",
 											"type": "DatasetReference",
 											"parameters": {
+												"container": "source",
 												"folder": {
 													"value": "@concat(\n    activity('read table for each').output.firstRow.source_system,\n    '/',activity('read table for each').output.firstRow.source_table_name,\n    '/',variables('starttime')\n)",
 													"type": "Expression"
-												},
-												"container": "landing"
+												}
 											}
 										}
 									]
