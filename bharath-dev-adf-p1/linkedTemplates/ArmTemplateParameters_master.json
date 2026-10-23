@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "bharath-dev-adf-p1"
+		},
+		"LS_AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://bharathdevdatalakep1.dfs.core.windows.net/"
+		},
+		"LS_AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "1020-134855-3idek28r"
+		},
+		"LS_AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "bharathdevserverp1.database.windows.net"
+		},
+		"LS_AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "free-sql-db-5038293"
+		},
+		"LS_AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "bharath_admin"
+		},
+		"LS_PostgreSql1_properties_typeProperties_server": {
+			"value": "ep-quiet-sound-b5ndmm7y-pooler.c-7.us-east-2.aws.neon.tech"
+		},
+		"LS_PostgreSql1_properties_typeProperties_database": {
+			"value": "neondb"
+		},
+		"LS_PostgreSql1_properties_typeProperties_username": {
+			"value": "neondb_owner"
+		},
+		"akv_AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://bharath-dev-akv-p1.vault.azure.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
