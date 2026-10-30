@@ -1,0 +1,12 @@
+{
+	"name": "bharath-dev-adf-p1",
+	"properties": {
+		"globalParameters": {
+			"email_receipients": {
+				"type": "string",
+				"value": "bvmbharath@gmail.com"
+			}
+		}
+	},
+	"location": "centralindia"
+}
