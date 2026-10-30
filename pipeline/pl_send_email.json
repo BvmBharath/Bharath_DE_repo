@@ -27,7 +27,8 @@
 					"dataset": {
 						"referenceName": "DS_AzureSqlTable1",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
@@ -147,7 +148,7 @@
 				"typeProperties": {
 					"variableName": "logicapps_body",
 					"value": {
-						"value": "{\n  \"subject\": \"@{variables('email_subject')}\",\n  \"email recipients\": \"@{pipeline().globalParameters.email_receipients}\",\n  \"body header\": \"@{variables('body_header')}\",\n  \"body footer\": \"@{variables('body_footer')}\",\n  \"status table\": @{activity('read all tables status').output}\n}",
+						"value": "{\n  \"subject\": \"@{variables('email_subject')}\",\n  \"email recipients\": \"@{pipeline().globalParameters.email_receipients}\",\n  \"body header\": \"@{variables('body_header')}\",\n  \"body footer\": \"@{variables('body_footer')}\",\n  \"status table\": @{activity('read all tables status').output.value}\n}",
 						"type": "Expression"
 					}
 				}
