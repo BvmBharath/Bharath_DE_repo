@@ -1,1 +1,14 @@
-{}
+{
+	"email_receipients": {
+		"type": "string",
+		"value": "bvmbharath@gmail.com"
+	},
+	"env": {
+		"type": "string",
+		"value": "DEV"
+	},
+	"logicapp_url": {
+		"type": "string",
+		"value": "https://prod-18.centralindia.logic.azure.com:443/workflows/4249728433f948aeab67bb566c3bbebf/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=gkchE5M-vh9e5m8AgE3rqHdKvl6cXrWv08GI_Ywpahs"
+	}
+}
