@@ -961,7 +961,7 @@
 											{
 												"type": "Query",
 												"text": {
-													"value": "update ctrl.audit_log\nset status = 'SUCCESS',end_time = SYSUTCDATETIME(),records_written = @{activity('silver to gold').output.runOutput}\nwhere adf_run_id  ='pipeline().parameters.adf_run_id' and table_id = @{item().table_id}",
+													"value": "update ctrl.audit_log\nset status = 'SUCCESS',end_time = SYSUTCDATETIME(),records_written = @{activity('silver to gold').output.runOutput}\nwhere adf_run_id  ='@{pipeline().parameters.adf_run_id}' and table_id =  @{item().table_id}",
 													"type": "Expression"
 												}
 											}
@@ -1150,6 +1150,23 @@
 											}
 										],
 										"scriptBlockExecutionTimeout": "02:00:00"
+									}
+								},
+								{
+									"name": "faile activity souce to silver inner",
+									"type": "Fail",
+									"dependsOn": [
+										{
+											"activity": "injest_from_source_to_silver",
+											"dependencyConditions": [
+												"Failed"
+											]
+										}
+									],
+									"userProperties": [],
+									"typeProperties": {
+										"message": "source silver inner activity failed",
+										"errorCode": "500"
 									}
 								}
 							]
